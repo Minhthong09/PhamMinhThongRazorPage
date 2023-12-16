@@ -1,0 +1,51 @@
+﻿@page
+@model PhamMinhThong_B3W_A02.Pages.Admin.CustomerManagementModel
+@{
+    Layout = "_Layout";
+}
+<h1>Customer Management</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.customers[0].CustomerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.customers[0].Telephone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.customers[0].Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.customers[0].CustomerBirthday)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.customers[0].CustomerStatus)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.customers)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telephone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerBirthday)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerStatus)
+                </td>
+                <td></td>
+            </tr>
+        }
+    </tbody>
+</table>
